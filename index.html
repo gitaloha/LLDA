@@ -1,0 +1,292 @@
+<!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+	<head>
+		<title>lln数据分析</title>
+		<meta http-equiv="Content-type" content="text/html"; charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="styles/site.css"/>
+		<script type="text/javascript" src="scripts/lib/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="scripts/lib/ichart.1.2.src.js"></script>
+		<script type="text/javascript" src="scripts/menu.js"></script>
+		<script type="text/javascript" src="scripts/chartButton.js"></script>
+		<script type="text/javascript" src="scripts/chart.js"></script>
+		<script type="text/javascript" src="scripts/config.js"></script>
+		<script type="text/javascript" src="scripts/xmlParse.js"></script>
+		<script type="text/javascript" src="scripts/promo.js"></script>
+		<script type="text/javascript" src="scripts/animation/people.js"></script>
+		<script type="text/javascript" src="scripts/animation.js"></script>
+
+	</head>
+	<body>
+		<!-- 网页头部 -->
+		<div id="header">
+			<!-- logo-->
+			<div>
+				<div class="logo" >
+					<div class="maincontent">
+						<a href="#" class="logoA"> <img alt src="http://www.vtech.com/gatewayfiles/images/logo_vtech.jpg" id="LogoImg" /> </a>
+					</div>
+				</div>
+			</div>
+			<!-- 导航栏 -->
+
+			<div id="nav">
+				<div id="menu">
+					<ul >
+
+						<li class="navlist">
+							<a class="menuitem" href="index.html">主页</a>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showInstall" >安装/卸载</a>
+							<div class="submenu">
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showInstall" id="install_link">安装统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showInstall">安装总量统计</a>
+										|
+										<a href="dataview.html?name=showInstallPro">安装产品统计</a>
+										|<br \>
+										<a href="dataview.html?name=showInstallFailed">安装失败总量统计</a>
+										|<br \>
+										<a href="dataview.html?name=showInstallFailedPro">安装失败产品统计</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showUnload" id="unload_link" >卸载统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showUnload">卸载总量统计</a>
+										|
+										<a href="dataview.html?name=showUnloadPro">卸载产品统计</a>
+										|<br \>
+										<a href="dataview.html?name=showUnloadFailed">卸载失败总量统计</a>
+										|<br \>
+										<a href="dataview.html?name=showUnloadFailedPro">卸载失败产品统计</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showRegister"  id="user_link" >用户账户</a>
+							<div class="submenu" >
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showRegister"  >注册总量</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showRegister" >注册用户总量</a>
+										|
+										<a href="dataview.html?name=showRegister-country" >各语种注册总量</a>
+										|
+										<a href="dataview.html?name=showRegister-machine" >各产品注册总量</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showLogin" id="login_link" >用户登录情况</a>
+									</dt>
+
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showChild">孩子年龄段分布</a>
+									</dt>
+
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showCount">购买机器个数</a>
+									</dt>
+								</dl>
+							</div>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showOrder" id="shop_link" >商店</a>
+							<div class="submenu" >
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showOrder">销量统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showOrder">订单总量</a>
+										|
+										<a href="dataview.html?name=showShoppingCart">购物车使用量</a>
+
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showFreedownload">消费统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showFreedownload">Freedownload使用</a>
+										|
+										<a href="dataview.html?name=showSuccessPay">成功付款量</a>
+										|
+										<a href="dataview.html?name=showGiftCard">Gift Card使用</a>
+										|
+										<a href="dataview.html?name=showCancle">取消付款量</a>
+										|
+										<a  href="dataview.html?name=Failed">付款失败量</a>
+
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a  href="dataview.html?name=showDownload"  >下载总量</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showDownload">下载总量</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showSearchTotal" id="search_link" >搜索数据</a>
+							<div class="submenu">
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showSearchTotal">Search增量统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showSearchTotal" >Search总量</a>
+										|
+										<a href="dataview.html?name=showSearchUser">Search用户量</a>
+										|
+										<a href="dataview.html?name=showSearchKey">Search关键字统计</a>
+										|
+										<a href="dataview.html?name=showDetail">Detail动作总量</a>
+										|
+										<a href="dataview.html?name=showAddcart">Addcat动作总量</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showSearchLinkrate">Search环比分析</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showSearchLinkrate">Search总量环比率</a>
+										|
+										<a href="dataview.html?name=showSearchUserLinkrate">Search用户量环比率</a>
+										|
+										<a href="dataview.html?name=showSearchKeyLinkrate">Search关键字环比率</a>
+										|
+										<a href="dataview.html?name=showDetailLinkrate">Detail动作总量环比率</a>
+										|
+										<a href="dataview.html?name=showAddcartLinkrate">Addcat动作总量环比率</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showCompare">Search使用效果</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showCompare">Search,Detail,Addcart对比分析</a>
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showUserinfo" id="track_link" >用户追踪</a>
+							<div class="submenu">
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showUserinfo">生命周期</a>
+									</dt>
+
+								</dl>
+
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- end of 导航栏-->
+		</div>
+		<!-- end of 网页头部 -->
+
+		<!-- 网页主体部分 -->
+		<div id="container">
+			<!-- 统计数据的推荐栏目 -->
+			<div id="promo">
+				<div>
+					<div id="last-chart"></div>
+					<div id="next-chart"></div>
+					<div class="promo-item" >
+						<div class="promo-chart" id="promoChartOne"></div>
+						<div class="promo-tip">
+							<h2>标题1</h2>
+							<b>说明说明说明说明bra bra 。。。</b>
+							<a href="#">了解详情</a>
+						</div>
+					</div>
+					<div class="promo-item" >
+						<div class="promo-chart" id="promoChartTwo"></div>
+						<div class="promo-tip">
+							<h2>标题2</h2>
+							<b>说明说明说明说明bra bra 。。。</b>
+							<a href="#">了解详情</a>
+						</div>
+					</div>
+					<div class="promo-item" >
+						<div class="promo-chart" id="promoChartThree"></div>
+						<div class="promo-tip">
+							<h2>标题3</h2>
+							<b>说明说明说明说明bra bra 。。。</b>
+							<a href="#">了解详情</a>
+						</div>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div>
+					<div id="chart-pages">
+						<div style="clear:both;width:0;"></div>
+					</div>
+					<div style="clear:both;width:0;margin:0"></div>
+				</div>
+			</div>
+			<!-- end of 统计数据推荐栏目 -->
+
+			<!-- 用户行为过程 -->
+			<div id="allUserBehaviour">
+				<canvas height="400px" width="800px" id="animationCanvas"></canvas>
+			</div>
+			<!-- end of 用户行为过程 -->
+
+		</div>
+		<!-- end of 网页主体部分 -->
+
+		<!-- 网页底部 -->
+		<div id="footer">
+			<hr />
+			<div id="links">
+				<a href="#">关于我们</a>
+				<a href="#">联系我们</a>
+				<a href="#">伟易达官网</a>
+				<a href="#">web部门</a>
+			</div>
+			<div id="copyrights">
+				未经授权禁止转载、摘编、复制或建立镜像，如有违反，追究法律责任。&nbsp;&nbsp;|&nbsp;&nbsp;
+				VTech® is a registered trademark of VTech Holdings Ltd&nbsp;&nbsp;|&nbsp;&nbsp; Privacy Statement ©2013 VTech Holdings Ltd. All Rights Reserved
+			</div>
+		</div>
+		<!-- end of 网页底部 -->
+		<!--图片遮罩-->
+		<!--放大图片-->
+		<div class="new-image" id="boostChart"></div>
+		<div id="shade"></div>
+
+		<!-- 回到顶部-->
+		<a id="gotop" href="#" style="position:fixed; right:10px; top:577px; ">回到顶部</a>
+		<a id="feedback" href="#" style="position:fixed; right:10px; top:637px; display:block">意见反馈</a>
+		<!-- end of 回到顶部-->
+	</body>
+
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+
+	<head>
+		<title>lln数据分析</title>
+		<meta http-equiv="Content-type" content="text/html"; charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="styles/site.css"/>
+		<script type="text/javascript" src="scripts/lib/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="scripts/animation/people.js"></script>
+		<script type="text/javascript" src="scripts/animation/stage.js"></script>
+		<script type="text/javascript" src="scripts/animation.js"></script>
+		<!-- 
+		<script type="text/javascript">
+            function cnvs_getCoordinates(e) {
+                x = e.clientX;
+                y = e.clientY;
+                document.getElementById("xycoordinates").innerHTML = "Coordinates: (" + x + "," + y + ")";
+            }
+
+            function cnvs_clearCoordinates() {
+                document.getElementById("xycoordinates").innerHTML = "";
+            }
+		</script>
+		-->
+
+	</head>
+	<body>
+		<div onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()">
+		<canvas height="600px" width="800px" id="animationCanvas"></canvas>
+		</div>
+		<div id="xycoordinates"></div>
+	</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LLDA——Data Show</title>
+		<meta http-equiv="Content-type" content="text/html"; charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="styles/site.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/subPageStyle.css" />
+		<script type="text/javascript" src="scripts/lib/ichart.1.2.src.js"></script>
+		<script type="text/javascript" src="scripts/lib/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="scripts/dialog.js"></script>
+		<script type="text/javascript" src="scripts/chartButton.js"></script>
+		<script type="text/javascript" src="scripts/dataTable.js"></script>
+		<script type="text/javascript" src="scripts/menu.js"></script>
+		<script type="text/javascript" src="scripts/chart.js"></script>
+		<script type="text/javascript" src="scripts/polymerize.js"></script>
+		<script type="text/javascript" src="scripts/config.js"></script>
+		<script type="text/javascript" src="scripts/xmlParse.js"></script>
+		<script type="text/javascript" src="scripts/subPage.js"></script>
+		
+		<script type="text/javascript" src="Date_design/WdatePicker.js"></script>
+	</head>
+	<body>
+		<!-- 网页头部 -->
+		<div id="header">
+			<!-- logo-->
+			<div class="logo">
+				<div class="maincontent">
+					<a href="http://www.baidu.com" class="logoA"> <img alt src="http://www.vtech.com/gatewayfiles/images/logo_vtech.jpg" id="LogoImg" /> </a>
+				</div>
+			</div>
+			<!-- 导航栏 -->
+			<div id="nav">
+				<div id="menu">
+					<ul >
+
+						<li class="navlist">
+							<a class="menuitem" href="index.html">主页</a>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showInstall" >安装/卸载</a>
+							<div class="submenu">
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showInstall" id="install_link">安装统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showInstall">安装总量统计</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showUnload" id="unload_link" >卸载统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showUnload">卸载总量统计</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showRegister"  id="user_link" >用户账户</a>
+							<div class="submenu" >
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showRegister"  >注册总量</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showRegister" >LL注册用户</a>
+										<a href="dataview.html?name=showConsoleRegister" >ll console 注册</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showLogin" id="login_link" >用户登录情况</a>
+									</dt>
+
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showChild">孩子年龄段分布</a>
+									</dt>
+
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showCount">购买机器个数</a>
+									</dt>
+								</dl>
+							</div>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showOrder" id="shop_link" >商店</a>
+							<div class="submenu" >
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showOrder">销量统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showOrder">订单总量</a>
+										|
+										<a href="dataview.html?name=showShoppingCart">购物车使用量</a>
+
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showFreedownload">消费统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showFreedownload">Freedownload使用</a>
+										|
+										<a href="dataview.html?name=showSuccessPay">成功付款量</a>
+										|
+										<a href="dataview.html?name=showGiftCard">Gift Card使用</a>
+										|
+										<a href="dataview.html?name=showCancle">取消付款量</a>
+										|
+										<a  href="dataview.html?name=Failed">付款失败量</a>
+
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a  href="dataview.html?name=showDownload"  >下载总量</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showDownload">下载总量</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showSearchTotal" id="search_link" >搜索数据</a>
+							<div class="submenu">
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showSearchTotal">Search增量统计</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showSearchTotal" >Search总量</a>
+										|
+										<a href="dataview.html?name=showSearchUser">Search用户量</a>
+										|
+										<a href="dataview.html?name=showSearchKey">Search关键字统计</a>
+										|
+										<a href="dataview.html?name=showDetail">Detail动作总量</a>
+										|
+										<a href="dataview.html?name=showAddcart">Addcat动作总量</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showSearchLinkrate">Search环比分析</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showSearchLinkrate">Search总量环比率</a>
+										|
+										<a href="dataview.html?name=showSearchUserLinkrate">Search用户量环比率</a>
+										|
+										<a href="dataview.html?name=showSearchKeyLinkrate">Search关键字环比率</a>
+										|
+										<a href="dataview.html?name=showDetailLinkrate">Detail动作总量环比率</a>
+										|
+										<a href="dataview.html?name=showAddcartLinkrate">Addcat动作总量环比率</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showCompare">Search使用效果</a>
+									</dt>
+									<dd>
+										<a href="dataview.html?name=showCompare">Search,Detail,Addcart对比分析</a>
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li class="navlist">
+							<a class="menuitem" href="dataview.html?name=showUserinfo" id="track_link" >用户追踪</a>
+							<div class="submenu">
+								<dl>
+									<dt>
+										<a href="dataview.html?name=showUserinfo">生命周期</a>
+									</dt>
+
+								</dl>
+
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- end of 导航栏-->
+		</div>
+		<!-- end of 网页头部 -->
+
+		<!-- 网页主体部分 -->
+		<div id="container">
+			<div id="sub-menu">
+				<div id="menu-cont">
+					<h3 class="main-header"><span class="main-icon "></span><a href="#">数据分类</a></h3>
+					<h3 class="first-header click-header"><span class="ui-icon ui-icon-static "></span><a href="#">安装/卸载</a></h3>
+					<div class="first-content  widget-first">
+
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">安装统计</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now"  name="showInstall">
+								安装总量统计
+							</p>
+						</div>
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">卸载统计</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showUnload">
+								卸载总量统计
+							</p>
+						</div>
+
+					</div>
+					<h3 class="first-header click-header"><span class="ui-icon ui-icon-static "></span><a href="#">用户账户</a></h3>
+					<div class="first-content widget-first">
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">注册总量</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showRegister">
+								Amount of registers
+							</p>
+							<p class="list_item list_now" name="showConsoleRegister">
+								ll console registers
+							</p>
+						</div>
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">用户登录情况</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showLogin">
+								Children login
+							</p>
+						</div>
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">孩子年龄段分布</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showChild">
+								Children age
+							</p>
+						</div>
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">购买机器个数</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showCount">
+								Amount of machine
+							</p>
+						</div>
+					</div>
+					<h3 class="first-header click-header"><span class="ui-icon ui-icon-static "></span><a href="#">商店</a></h3>
+					<div class="first-content widget-first">
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">销量统计</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showOrder">
+								Amount of order
+							</p>
+							<p class="list_item list_now" name="showShoppingCart">
+								Amount of shopping cart
+							</p>
+						</div>
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">消费统计</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showFreedownload">
+								Useage of free download
+							</p>
+							<p class="list_item list_now" name="showSuccessPay">
+								Payment
+							</p>
+							<p class="list_item list_now" name="showGiftCard">
+								Useage of GiftCard
+							</p>
+							<p class="list_item list_now" name="showCancle">
+								Failed to pay
+							</p>
+							<p class="list_item list_now" name="Failed">
+								Payment failed
+							</p>
+						</div>
+
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">下载总量</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showDownload">
+								Download amount
+							</p>
+						</div>
+
+					</div>
+					<h3 class="first-header click-header"><span class="ui-icon ui-icon-static "></span><a href="#">搜索数据</a></h3>
+					<div class="first-content widget-first">
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">Search增量统计</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showSearchTotal">
+								Search count
+							</p>
+							<p class="list_item list_now" name="showSearchUser">
+								Search user count
+							</p>
+							<p class="list_item list_now" name="showSearchKey">
+								Search keyword
+							</p>
+							<p class="list_item list_now" name="showDetail">
+								Go to Detail
+							</p>
+							<p class="list_item list_now" name="showAddcart">
+								Add to cart
+							</p>
+						</div>
+
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">Search环比分析</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showSearchLinkrate">
+								Search linkrate
+							</p>
+							<p class="list_item list_now" name="showSearchUserLinkrate">
+								Search user linkrate
+							</p>
+							<p class="list_item list_now" name="showSearchKeyLinkrate">
+								Search keyword linkrate
+							</p>
+							<p class="list_item list_now" name="showDetailLinkrate">
+								Go to Detail linkrate
+							</p>
+							<p class="list_item list_now" name="showAddcartLinkrate">
+								Add to cart linkrate
+							</p>
+						</div>
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">Search使用效果</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showCompare">
+								Search,Detail,Addcart对比分析
+							</p>
+						</div>
+					</div>
+					<h3 class="first-header click-header"><span class="ui-icon ui-icon-static "></span><a href="#">用户追踪</a></h3>
+					<div class="first-content widget-first">
+						<h4 class="second-header click-header-sec"><span class="ui-icon-sec ui-icon-static-sec"></span><a href="#">用户生命周期</a></h4>
+						<div class="second-content widget-second">
+							<p class="list_item list_now" name="showUserinfo">
+								用户生命周期
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="showWindow">
+				<div id="smallWindow">
+					<div id="title-bar">
+						<h2 class="title_name" id="window_title">安装总量统计</h2>
+					</div>
+					<div id="select-bar">
+						<!-- 开始和结束时间的选择 -->
+						<form id="selectForm">
+							<div id='start_end' class="optionDiv hidden">
+								<tr class='font'>
+									<td class='font_r'><span style="color:red">*</span><span> From: </span></td>
+									<td>
+									<input type='text' name="BeginDate" id='beginTimeOption' class='date_input' onclick='WdatePicker({isShowWeek:true})' />
+									</td>
+								</tr>
+								<tr class='font'>
+									<td class='font_r'><span style="color:red">*</span><span> To: </span></td>
+									<td>
+									<input type='text' name="EndDate" id='endTimeOption' class='date_input' onclick='WdatePicker({isShowWeek:true})' />
+									</td>
+								</tr>
+							</div>
+							<!-- 国家的选择 -->
+							<div id="select_country" class="optionDiv hidden">
+								<span>Country:</span>
+								<select name="Country" id="countryOption">
+									<option value="">——</option>
+								</select>
+								<p class="polymerizeBtn"></p>
+								<div class="selectShade"></div>
+							</div>
+							<!-- 产品的选择 -->
+							<div  id="select_product" class="optionDiv hidden">
+								<span>product ID:</span>
+								<select name="ProductID" id="productOption">
+									<option value="">——</option>
+								</select>
+								<p class="polymerizeBtn"></p>
+								<div class="selectShade"></div>
+							</div>
+							<!-- XX的选择 -->
+							<div  id="select_cateory" class="optionDiv hidden">
+								<span>Catory</span>
+								<select name="CategoryType" id="CatoryOption"></select>
+								<p class="polymerizeBtn"></p>
+								<div class="selectShade"></div>
+							</div>
+							<!-- 时间类型的选择 -->
+							<div id="select_timeType" class="optionDiv hidden">
+								<span>Time Type:</span>
+								<select name="DateType" id="timeTypeOption"></select>
+							</div>
+							<!-- XX的选择 -->
+							<div  id="select_childAge" class="optionDiv hidden">
+								<span>child age:</span>
+								<select name="ChildAge" id="childAgeOption"></select>
+								<p class="polymerizeBtn"></p>
+								<div class="selectShade"></div>
+							</div>
+
+							<div style="clear:both"></div>
+						</form>
+					</div>
+					<div id="image_frame">
+						<div class="image-show" id="chartWindow"></div>
+						<div id="chartTypeDiv">
+							<span class="chartTypeItem">Pie</span>
+							<span class="chartTypeItem">Line</span>
+							<span class="chartTypeItem">Column</span>
+						</div>
+					</div>
+					<div id="wait_div">
+						<div class="proccess hidden" id="loading">
+							<b>正在获取数据...</b>
+						</div>
+					</div>
+					<div id="chartBtn">
+						<div id="sharediv">
+							<!--
+							<span id="shareBtn">Share:</span>
+							<span id="shareSinaWb"></span>
+							<span id="shareTencentWb"></span>
+							<span id="shareRr"></span>
+							<span id="shareDouban"></span>
+							-->
+							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+								<span class="bds_more">Share:</span>
+								<a class="bds_fbook"></a>
+								<a class="bds_linkedin"></a>
+								<a class="bds_twi"></a>
+								<a class="bds_tsina"></a>
+								<a class="bds_tqq"></a>
+								<a class="bds_renren"></a>
+								<a class="bds_douban"></a>
+								<a class="shareCount"></a>
+							</div>
+							<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+							<script type="text/javascript" id="bdshell_js"></script>
+						</div>
+						<div id="exportBtn">
+							Export <a id="downloadImage" class="hidden"></a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="InfoWindow">
+					<div class="Info-sm">
+						说明
+					</div>
+					<div id="Info-detail">
+						No Desciption!
+					</div>
+					<span class="showDateBtn" id="showData" attr='hide'>Show data</span>
+					<div id="dataDiv">
+						<a href="#dataDiv" class="hidden" id="anchorDataDiv"></a>
+						<div id="dataError"></div>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+
+			</div>
+			<div style="clear:both"></div>
+			<div id="aggDiv">
+				<div class="aggBtnDiv">
+					<span class="aggBtn" id="aggReelect">Reelect</span>
+					<span class="aggBtn" id='aggCancel'>Cancel</span>
+				</div>
+			</div>
+
+		</div>
+		<!-- end of 网页主体部分 -->
+		<!--图片遮罩-->
+		<div id="shade"></div>
+
+		<!--放大图片-->
+		<div class="new-image" id="bigChart">
+
+		</div>
+		<div class="Image_close"></div>
+		<!-- 网页底部 -->
+		<div id="footer">
+			<hr />
+			<div id="links">
+				<a href="#">关于我们</a>
+				<a href="#">联系我们</a>
+				<a href="#">伟易达官网</a>
+				<a href="#">web部门</a>
+			</div>
+			<div id="copyrights">
+				未经授权禁止转载、摘编、复制或建立镜像，如有违反，追究法律责任。&nbsp;&nbsp;|&nbsp;&nbsp;
+				VTech® is a registered trademark of VTech Holdings Ltd&nbsp;&nbsp;|&nbsp;&nbsp; Privacy Statement ©2013 VTech Holdings Ltd. All Rights Reserved
+			</div>
+		</div>
+		<!-- end of 网页底部 -->
+
+		<!-- 回到顶部-->
+		<a id="gotop" href="#" style="position:fixed; right:10px; top:577px; ">回到顶部</a>
+		<a id="feedback" href="#" style="position:fixed; right:10px; top:637px; display:block">意见反馈</a>
+
+	</body>
+</html>

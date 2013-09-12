@@ -1,0 +1,652 @@
+#fixed_bar {
+    position: fixed;
+    top: 10px;
+}
+
+/*showWindow*/
+#showWindow {
+    margin: auto;
+    float: right;
+    width: 810px;
+    overflow: hidden;
+    margin-top: 5px;
+    /*   border:1px solid #FF0000;*/
+
+}
+#smallWindow {
+    position: relative;
+    margin: auto;
+    float: left;
+    width: 800px;
+    /*height:350px;*/
+    overflow: hidden;
+    /*border: 1px solid #4E78C2;*/
+
+}
+#smallWindow #title-bar {
+    background-image: -webkit-linear-gradient(top,#5E8EE4,#4173C9);
+    padding: 5px;
+    border-radius: 4px;
+}
+#title-bar h2 {
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+    color: #FFA4DE;
+    text-align: center;
+}
+
+#chartBtn{
+    max-height: 50px;
+    padding: 10px ;
+    float: right;
+    
+}
+#exportBtn{
+    padding: 2px 10px;
+    color: rgb(11, 41, 70);
+    font-size: 14px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #98adc1;
+    cursor: pointer;
+}
+#sharediv{
+    
+}
+#sharediv span{
+    height:22px;
+    min-width:22px;
+    padding-top:2px;
+    padding-bottom:2px;
+    font-size:14px;
+    float:left;
+    background: url("../images/share.png") no-repeat ;
+    
+}
+.bds_more{
+    color: rgb(11, 41, 70);
+    font-size: 14px;
+}
+#shareSinaWb{
+    cursor: pointer;
+    background-position: 0 -118px!important;
+}
+#shareTencentWb{
+    cursor: pointer;
+    background-position: 0 -238px!important;
+}
+#shareRr{
+    cursor: pointer;
+    background-position: 0 -198px!important;
+}
+#shareDouban{
+    cursor: pointer;
+    background-position: 0 -398px!important;
+}
+#chartBtn div{
+    float: right;
+    margin: 0 20px;
+}
+
+/**
+ *  等待标签显示
+ */
+#wait_div {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+#wait_div img {
+    vertical-align: middle;
+}
+.proccess b {
+    font-size: 14px;
+    vertical-align: middle;
+    background: url(../images/wait.gif) no-repeat 0 center;
+    display: inline-block;
+    padding-left: 35px;
+}
+.proccess {
+    border: 0px solid #009900;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #FFEFDB;
+    margin: 0;
+    top:       :0px;
+}
+#wait_proccess {
+    height: 40px;
+}
+#chartTypeDiv {
+    top: 5px;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+
+.chartTypeItem {
+    font: normal 12px "Courier New", Courier, monospace;
+    font-style: normal;
+    color: #ffffff;
+    background: #2c9ba3;
+    border: 1px outset #ffffff;
+    text-shadow: 0px -1px 3px #000000;
+    box-shadow: 1px 3px 9px #000000;
+    -moz-box-shadow: 1px 3px 9px #000000;
+    -webkit-box-shadow: 1px 3px 9px #000000;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.chartTypeItem:active {
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+
+
+
+/**
+ * 	日期选择
+ */
+#select-bar {
+    float: left;
+    padding: 6px;
+    background-color: #D5F7FD;
+    width: 100%;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+}
+#type_choose {
+    margin-top: 2px;
+    margin-left: 10px;
+    float: right;
+}
+.optionDiv {
+    float: left;
+    margin: 2px 5px 2px 5px;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+    font-size: 12px;
+}
+form {
+    float: left;
+}
+#select-bar .select-title {
+    text-align: center;
+    font-size: 13px;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+}
+
+#start_end td {
+    height: 32px;
+    color: #333;
+}
+#start_end td, #start_end tr, #start_end th {
+    font-size: 12px;
+}
+#start_end input {
+    width: 80px;
+}
+.optionDiv {
+    float: left;
+    position: relative;
+}
+.optionDiv span {
+    color: black;
+    line-height: 23px;
+}
+.optionDiv * {
+    float: left;
+}
+
+.spanRed {
+    color: red;
+}
+.polymerizeBtn {
+    background-image: url(../images/polymerize.png);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.selectShade {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.selectShadeShow {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    background-color: #CCC;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    opacity: 0.4;
+}
+#aggDiv {
+    max-width: 300px;
+    position: fixed;
+    display: none;
+    border: 4px #bbb;
+    background-color: #e3e3e3;
+}
+#aggHead {
+    background-color: #336699;
+    font-size: 14px;
+    font: bold;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 35px;
+}
+.aggItemHead {
+    font: bold 16px "Arial Black", Gadget, sans-serif;
+    font-style: normal;
+    color: #ffd324;
+    background: #158edb;
+    border: 0px solid #4a3a00;
+    text-shadow: 0px -1px 1px #222222;
+    width: 120px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.aggItem {
+    font: normal 13px Verdana, Geneva, sans-serif;
+    font-style: normal;
+    color: #143891;
+    background: #dedede;
+    border: 1px solid #bbb;
+    text-shadow: 0px 1px 0px #fff;
+    box-shadow: 0px 1px 10px #d1cfd1;
+    -moz-box-shadow: 0px 1px 10px #d1cfd1;
+    -webkit-box-shadow: 0px 1px 10px #d1cfd1;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    width: 120px;
+    padding: 5px 14px;
+    cursor: pointer;
+    margin: 3px auto;
+    display: block;
+}
+.aggBtnDiv {
+    margin: 10px 5px;
+}
+.aggBtn {
+    font: bold 14px Georgia, serif;
+    font-style: normal;
+    color: #ffffff;
+    background: #70b5f6;
+    border: 2px solid #968B8B;
+    text-shadow: 0px -1px 1px #222222;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 3px 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.aggBtn:active {
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+
+
+input {
+    margin-left: 5px;
+    vertical-align: middle;
+    margin: 0px;
+    font-family: Arial;
+    line-height: 18px;
+}
+.date_input {
+    height: 20px;
+    font-size: 12px;
+    color: #333;
+    padding: 0 2px;
+    border-top: 1px solid #C2C2C2;
+    border-left: 1px solid #C2C2C2;
+    border-right: 1px solid #EAEAEA;
+    text-align: left;
+    background: white url(../Date_design/skin/datePicker.gif) no-repeat right;
+}
+
+#image_frame {
+    text-align: left;
+    float: left;
+    position: relative;
+}
+.image-show {
+    width: 800px;
+    height: 500px;
+}
+
+/*图片放大*/
+#shade {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: #000;
+    filter: alpha(opacity:50);
+    opacity: 0.5;
+}
+.new-image {
+    background: #fff;
+    padding: 3px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    text-align: center;
+    z-index: 10000;
+}
+.Image_close {
+    background: url(../images/close.png) center no-repeat;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+    z-index: 10001;
+}
+
+/*侧边菜单*/
+#sub-menu {
+    width: 215px;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: left;
+    overflow: hidden;
+    /* border:1px solid #dcdcdc;   */
+    background: #FEFEFE;
+    text-align: center;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+}
+#menu-cont {
+    text-align: left;
+}
+#menu-cont .first-header, #menu-cont .second-header, #menu-cont .main-header {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    zoom: 1;
+    border: 1px solid lightGrey;
+    border-radius: 4px;
+    background: #efefef url(../images/header-static-back.png) 50% 50% repeat-x;
+    background-attachment: scroll;
+    color: #555;
+    line-height: 1.3;
+}
+
+.main div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.main {
+    margin: 0;
+    padding: 4px 10px 0 10px;
+    width: auto;
+    height: 25px;
+    border: 1px solid lightGrey;
+    border-radius: 4px;
+    background: #DADADA url(../images/header-static-back.png) 50% 50% repeat-x;
+}
+
+#main-title {
+    font-size: 15px;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+    color: #0086c8;
+    float: left;
+}
+.main-icon {
+    background-image: url(../images/icons-static.png);
+    background-position: 0 -96px;
+}
+.first-hover {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    zoom: 1;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #DADADA url(../images/f-header-hover.png) 50% 50% repeat-x;
+    background-attachment: scroll;
+    color: #555;
+    line-height: 1.3;
+}
+.first-focus {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    zoom: 1;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #DADADA url(../images/f-header-hover.png) 50% 50% repeat-x;
+    background-attachment: scroll;
+    color: #555;
+    line-height: 1.3;
+}
+#menu-cont h3 {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.first-header-active {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    zoom: 1;
+    border-top: 1px solid #999999;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-attachment: scroll;
+    color: #212121;
+    line-height: 1.3;
+    background: white url(../images/activeBack.png) 50% 50% repeat-x;
+}
+.second-header-active {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    zoom: 1;
+    border-radius: 4px;
+    background-attachment: scroll;
+    color: #212121;
+    line-height: 1.3;
+    background: white url(../images/activeBack.png) 50% 50% repeat-x;
+}
+
+.ui-icon, .ui-icon-sec, .main-icon {
+    display: block;
+    position: absolute;left .5em;
+    top: 50%;
+    margin-top: -8px;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.ui-icon-static {
+    background-image: url(../images/icons-static.png);
+    background-position: -112px -192px;
+}
+.ui-icon-active {
+    background-image: url(../images/icons-active.png);
+    background-position: -128px -192px;
+}
+.ui-icon-static-sec {
+    background-image: url(../images/icons-static.png);
+    background-position: 0 0;
+}
+.ui-icon-active-sec {
+    background-image: url(../images/icons-active.png);
+    background-position: -64px 0;
+}
+
+.click-header a, .click-header a:link, .click-header a:visited, .main-header a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 13px;
+    display: block;
+    font-size: 1em;
+    padding: .5em .5em .5em .7em;
+}
+.click-header-sec a {
+    color: #555555;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    margin-left: 12px;
+    padding: .5em .5em .5em .7em;
+}
+.first-content {
+    border-left: 1px solid #AAA;
+    border-right: 1px solid #AAA;
+    border-bottom: 1px solid #AAA;
+}
+.first-content, .second-content {
+    padding: 5px 10px;
+    border-top: 0;
+    margin-top: -2px;
+    position: relative;
+    margin-bottom: 2px;
+    overflow: auto;
+    display: none;
+    zoom: 1;
+    /*background :white url(../images/ui-content.png) 50% 50% repeat-x;*/
+    color: #222;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.list_item {
+    font-size: 12px;
+    line-height: 25px;
+    display: block;
+    padding-left: 24px;
+    background: url(../images/list_item.png);
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+}
+.list_now {
+
+    color: #0086c8;
+}
+.list_focus {
+    color: #FF9900;
+}
+
+/*显示信息*/
+.InfoWindow {
+    margin: 10px;
+    /*  border:1px solid #000000;*/
+    text-align: left;
+}
+.showDateBtn {
+
+    padding: 2px 5px;
+    line-height: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+    border: 1px solid #98ADC1;
+    box-shadow: 0px 0px 2px #365073;
+    border-radius: 5px;
+    color: #0B2946;
+}
+.data-show {
+    padding: auto;
+    margin: auto;
+    display: none;
+    border: #00FF00 1px solid;
+    height: 200px;
+    width: 100%;
+}
+.Info-sm {
+    margin: 10px 0px;
+    font-size: 13px;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+    font-weight: 600;
+    text-align: left;
+    color: #1b4267;
+}
+#Info-detail {
+    padding: 0px;
+    text-indent: 20px;
+    font-size: 12px;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+    line-height: 20px;
+    color: #1B4267;
+}
+#dataDiv {
+    margin:  auto;
+    margin-bottom: 20px;
+    width: 780px;
+    display: none;
+    position: relative;
+}
+.dataTableView{
+    margin: 15px auto;
+}
+.dataTableView h2{
+    font: 16px;
+    text-align: center;
+    font-family: STHeiti, "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+    color: #034C50;
+}
+.dataTableView .dataPage{
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 550px;
+}
+.dataTableView .dataPage span{
+    display:block;
+    border: 1px solid #dbe5ee;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 24px;
+    font-size:12px;
+    padding: 0 8px;
+    float: left;
+    margin: 0 5px;
+}
+.dataTableView .dataPage span:hover{
+    background-color: #0099CC;
+    color: white;
+}
+.dataPageSelected{
+    background-color: #0099CC;
+    color: white;
+}
+.{
+    background-color: #0099CC;
+    color: white;            
+}
+#container #dataDiv table{color:#333333;  border-width: 1px;  border-color: #E7E7E8;  border-collapse: collapse; margin:0 auto;}
+#container #dataDiv th{border-width: 1px; height:22px; padding:0 8px; line-height:22px; padding-top:2px; border-style: solid; border-color: #E7E7E8; background-color: #E7E7E8; font-weight:lighter; font-size:14px; white-space:nowrap; }
+#container #dataDiv td{ text-align: left;max-width: 180px;overflow: hidden;text-align:center;border-width: 1px;  padding: 8px; color:#1382CE; border-style: solid;border-color: #E7E7E8; background-color: #FFF; font-size:12px;  white-space:nowrap;}
+
+.hidden {
+    display: none;
+}
+
